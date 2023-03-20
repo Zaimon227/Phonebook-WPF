@@ -40,7 +40,6 @@ namespace Registration
         
         public void usersgridbind()
         {
-            // save connection string in properties.settings and fetch dynamically
 
             DatabaseControl sql = new DatabaseControl();
             PageNumber = 1;
@@ -54,6 +53,7 @@ namespace Registration
             NextPreviousPageChecker();
         }
 
+        // Method for checking if previous and next page is empty.. also enables and disables button
         public void NextPreviousPageChecker()
         {
             DatabaseControl sql = new DatabaseControl();
