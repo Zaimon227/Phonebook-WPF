@@ -1,0 +1,117 @@
+﻿<Page x:Class="Registration.UsersTable"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UsersTable"
+      Background="#ebebeb">
+
+    <Grid>
+        <TextBlock 
+            Style="{StaticResource TableTitles}"
+            Text="Users Table"/>
+        <TextBox 
+            x:Name="tbxSearch"
+            Style="{StaticResource CommonTextBox}"
+            Margin="0,17,124,0" 
+            TextWrapping="Wrap" 
+            Text="" 
+            VerticalAlignment="Top"
+            Height="26" 
+            HorizontalAlignment="Right" 
+            Width="330"/>
+        <Button 
+            Style="{StaticResource CommonButton}" 
+            Content="Search" 
+            HorizontalAlignment="Right" 
+            Margin="0,21,67,0" 
+            VerticalAlignment="Top"
+            Width="52" 
+            Height="18"
+            FontSize="9" 
+            Click="SearchButton_Click"/>
+        <Button 
+            Style="{StaticResource CommonButton}" 
+            Content="Reset" 
+            HorizontalAlignment="Right" 
+            Margin="0,21,10,0" 
+            VerticalAlignment="Top"
+            Width="52" 
+            Height="18"
+            FontSize="9"
+            Click="ResetSearchButton_Click"/>
+        <DataGrid 
+            Style="{StaticResource CommonTable}"
+            ColumnHeaderStyle="{StaticResource GreenHeader}"
+            RowStyle="{StaticResource GreenRowHover}"
+            CellStyle="{StaticResource CommonTableCell}"
+            x:Name="UsersDataGrid" 
+            CanUserAddRows="False"
+            x:FieldModifier="public"
+            AutoGenerateColumns="False"
+            ColumnWidth="*" 
+            Margin="10,55,10,10" 
+            IsSynchronizedWithCurrentItem="False"
+            Loaded="UsersDataGrid_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="User ID" Binding="{Binding userid}"/>
+                <DataGridTextColumn Header="Complete Name" Binding="{Binding completename}"/>
+                <DataGridTextColumn Header="Gender" Binding="{Binding gender}"/>
+                <DataGridTextColumn Header="Birthdate" Binding="{Binding birthdate}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding email}"/>
+                <DataGridTextColumn Header="Religion" Binding="{Binding religionname}"/>
+                <DataGridTextColumn Header="Nationality" Binding="{Binding nationalityname}"/>
+                <DataGridTextColumn Header="Civil Status" Binding="{Binding civilstatusname}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text=""/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Style="{StaticResource TextButton}" Content="Delete"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button 
+            x:Name="PreviousPageButton"
+            Style="{StaticResource CommonButton}"
+            Content="&lt;" 
+            Margin="336,0,0,24"
+            Padding="3,2,3,2" 
+            HorizontalAlignment="Left" 
+            Width="24" 
+            Height="20" 
+            VerticalAlignment="Bottom"
+            Click="PreviousPageButton_Click"
+            IsEnabled="false"/>
+        <Button 
+            x:Name="NextPageButton"
+            Style="{StaticResource CommonButton}"
+            Content=">" 
+            Margin="0,0,338,24"
+            Padding="3,2,3,2" 
+            HorizontalAlignment="Right" 
+            Width="24" 
+            Height="20" 
+            VerticalAlignment="Bottom"
+            Click="NextPageButton_Click"/>
+        <TextBlock 
+            x:Name="tblkPageNumber"
+            Margin="0,0,0,26" 
+            TextWrapping="Wrap" 
+            Text="Page #" 
+            Height="16" 
+            VerticalAlignment="Bottom" 
+            HorizontalAlignment="Center" 
+            Width="42"/>
+    </Grid>
+</Page>

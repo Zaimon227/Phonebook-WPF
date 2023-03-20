@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TextBox" x:Key="CommonTextBox">
+        <Setter Property="BorderBrush" Value="#2eb36e"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+    <Style TargetType="PasswordBox" x:Key="CommonPasswordBox">
+        <Setter Property="BorderBrush" Value="#2eb36e"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+    <Style TargetType="DatePicker" x:Key="CommonDatePicker">
+        <Setter Property="BorderBrush" Value="#2eb36e"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+    <Style TargetType="ComboBox" x:Key="CommonComboBox">
+        <Setter Property="BorderBrush" Value="#2eb36e"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+</ResourceDictionary>

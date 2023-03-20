@@ -1,0 +1,17 @@
+﻿<Application x:Class="Registration.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Registration"
+             StartupUri="LoginPage.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionaries/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="ResourceDictionaries/DataGridStyles.xaml"/>
+                <ResourceDictionary Source="ResourceDictionaries/InputFieldStyles.xaml"/>
+                <ResourceDictionary Source="ResourceDictionaries/ContainerStyles.xaml"/>
+                <ResourceDictionary Source="ResourceDictionaries/TextBlockStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
