@@ -87,7 +87,6 @@ namespace Registration
 
         private void NextPageButton_Click(object sender, RoutedEventArgs e)
         {
-            //PreviousPageButton.IsEnabled = true;
             DatabaseControl sql = new DatabaseControl();
             PageNumber++;
             tblkPageNumber.Text = "Page " + PageNumber;

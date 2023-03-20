@@ -40,8 +40,6 @@ namespace Registration
 
         public void phonebookgridbind()
         {
-            // save connection string in properties.settings and fetch dynamically
-
             DatabaseControl sql = new DatabaseControl();
             PageNumber = 1;
             tblkPageNumber.Text = "Page " + PageNumber;
@@ -159,7 +157,6 @@ namespace Registration
 
         private void NextPageButton_Click(object sender, RoutedEventArgs e)
         {
-            //PreviousPageButton.IsEnabled = true;
             DatabaseControl sql = new DatabaseControl();
             PageNumber++;
             tblkPageNumber.Text = "Page " + PageNumber;
